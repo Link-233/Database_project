@@ -10,7 +10,7 @@
     </settings>
     
     <typeAliases>
-        <package name="crud.bean"/>
+        <package name="yyx.entity"/>
     </typeAliases>
 
 <!--    plugins标签要放在typeAliases标签后面-->
