@@ -5,6 +5,7 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="Flight_id" jdbcType="CHAR" property="flightId" />
     <result column="Fullratio" jdbcType="INTEGER" property="fullratio" />
+    <result column="Seatnum" jdbcType="INTEGER" property="seatnum" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -65,7 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, Flight_id, Fullratio
+    id, Flight_id, Fullratio, Seatnum
   </sql>
   <select id="selectByExample" parameterType="yyx.entity.AirSeatExample" resultMap="BaseResultMap">
     select
@@ -98,10 +99,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="yyx.entity.AirSeat">
-    insert into air_seat (id, Flight_id, Fullratio
-      )
-    values (#{id,jdbcType=INTEGER}, #{flightId,jdbcType=CHAR}, #{fullratio,jdbcType=INTEGER}
-      )
+    insert into air_seat (id, Flight_id, Fullratio, 
+      Seatnum)
+    values (#{id,jdbcType=INTEGER}, #{flightId,jdbcType=CHAR}, #{fullratio,jdbcType=INTEGER}, 
+      #{seatnum,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="yyx.entity.AirSeat">
     insert into air_seat
@@ -115,6 +116,9 @@
       <if test="fullratio != null">
         Fullratio,
       </if>
+      <if test="seatnum != null">
+        Seatnum,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -125,6 +129,9 @@
       </if>
       <if test="fullratio != null">
         #{fullratio,jdbcType=INTEGER},
+      </if>
+      <if test="seatnum != null">
+        #{seatnum,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -146,6 +153,9 @@
       <if test="record.fullratio != null">
         Fullratio = #{record.fullratio,jdbcType=INTEGER},
       </if>
+      <if test="record.seatnum != null">
+        Seatnum = #{record.seatnum,jdbcType=INTEGER},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -155,7 +165,8 @@
     update air_seat
     set id = #{record.id,jdbcType=INTEGER},
       Flight_id = #{record.flightId,jdbcType=CHAR},
-      Fullratio = #{record.fullratio,jdbcType=INTEGER}
+      Fullratio = #{record.fullratio,jdbcType=INTEGER},
+      Seatnum = #{record.seatnum,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -169,13 +180,17 @@
       <if test="fullratio != null">
         Fullratio = #{fullratio,jdbcType=INTEGER},
       </if>
+      <if test="seatnum != null">
+        Seatnum = #{seatnum,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="yyx.entity.AirSeat">
     update air_seat
     set Flight_id = #{flightId,jdbcType=CHAR},
-      Fullratio = #{fullratio,jdbcType=INTEGER}
+      Fullratio = #{fullratio,jdbcType=INTEGER},
+      Seatnum = #{seatnum,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

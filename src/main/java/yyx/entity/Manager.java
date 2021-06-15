@@ -1,19 +1,18 @@
 package yyx.entity;
 
 public class Manager {
-    private Integer id;
-
     private String username;
+
+    private Integer id;
 
     private String password;
 
-    public Manager(Integer id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
+    public String getUsername() {
+        return username;
     }
 
-    public Manager() {
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
     public Integer getId() {
@@ -22,14 +21,6 @@ public class Manager {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
     }
 
     public String getPassword() {

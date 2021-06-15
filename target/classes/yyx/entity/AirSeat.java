@@ -7,6 +7,8 @@ public class AirSeat {
 
     private Integer fullratio;
 
+    private Integer seatnum;
+
     public Integer getId() {
         return id;
     }
@@ -29,5 +31,13 @@ public class AirSeat {
 
     public void setFullratio(Integer fullratio) {
         this.fullratio = fullratio;
+    }
+
+    public Integer getSeatnum() {
+        return seatnum;
+    }
+
+    public void setSeatnum(Integer seatnum) {
+        this.seatnum = seatnum;
     }
 }

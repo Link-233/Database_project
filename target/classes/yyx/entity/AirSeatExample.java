@@ -293,6 +293,66 @@ public class AirSeatExample {
             addCriterion("Fullratio not between", value1, value2, "fullratio");
             return (Criteria) this;
         }
+
+        public Criteria andSeatnumIsNull() {
+            addCriterion("Seatnum is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumIsNotNull() {
+            addCriterion("Seatnum is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumEqualTo(Integer value) {
+            addCriterion("Seatnum =", value, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumNotEqualTo(Integer value) {
+            addCriterion("Seatnum <>", value, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumGreaterThan(Integer value) {
+            addCriterion("Seatnum >", value, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumGreaterThanOrEqualTo(Integer value) {
+            addCriterion("Seatnum >=", value, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumLessThan(Integer value) {
+            addCriterion("Seatnum <", value, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumLessThanOrEqualTo(Integer value) {
+            addCriterion("Seatnum <=", value, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumIn(List<Integer> values) {
+            addCriterion("Seatnum in", values, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumNotIn(List<Integer> values) {
+            addCriterion("Seatnum not in", values, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumBetween(Integer value1, Integer value2) {
+            addCriterion("Seatnum between", value1, value2, "seatnum");
+            return (Criteria) this;
+        }
+
+        public Criteria andSeatnumNotBetween(Integer value1, Integer value2) {
+            addCriterion("Seatnum not between", value1, value2, "seatnum");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {
