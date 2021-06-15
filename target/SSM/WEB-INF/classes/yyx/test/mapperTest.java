@@ -19,7 +19,6 @@ public class mapperTest {
         ManagerMapper managerMapper=ioc.getBean(ManagerMapper.class);
 
 
-        managerMapper.insert(new Manager(1,"yyx","123456"));
         System.out.println(managerMapper);
     }
 }
