@@ -3,6 +3,15 @@ package yyx.entity;
 public class UserInfo {
     private Integer id;
 
+    public UserInfo() {
+    }
+
+    public UserInfo(Integer id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+
     private String username;
 
     private String password;
@@ -29,5 +38,14 @@ public class UserInfo {
 
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
+    }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
