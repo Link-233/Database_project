@@ -37,7 +37,7 @@ public class mapperTest {
     public void testyyx(){
 
         UserInfoMapper mapper = sqlSession.getMapper(UserInfoMapper.class);
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 100; i++){
             String uuid = UUID.randomUUID().toString().substring(0, 5) + i;
             mapper.insertSelective(new UserInfo(i,"yyx"+i,"123456"));
         }

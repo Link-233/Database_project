@@ -21,7 +21,7 @@ import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(locations = {"classpath:applicationContext.xml","file:E:/课程/数据库/demo/src/main/webapp/WEB-INF/dispatcher-servlet.xml"})
+@ContextConfiguration(locations = {"classpath:applicationContext.xml","file:E:/课程/数据库/demo/Database_project/src/main/webapp/WEB-INF/dispatcher-servlet.xml"})
 public class MvcTest {
 
     @Autowired

@@ -18,7 +18,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping("/users")
+    @RequestMapping("/findusers")
     public String getUser(@RequestParam(value="pn",defaultValue = "1")Integer pn,
                           Model model){
         //非常多的记录，需要分页

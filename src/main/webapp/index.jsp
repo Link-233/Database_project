@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:forward page="//users"></jsp:forward>
+<jsp:forward page="/findusers"></jsp:forward>
 
 <%--<html>--%>
 <%--<head>--%>
@@ -26,11 +26,11 @@
 <%--    <script src="${APP_PATH}/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>--%>
 
 
-<%--</head>--%>
-<%--<body>--%>
+</head>
+<body>
 
-<%--<h2>hello world!</h2>--%>
+<h2>hello world!</h2>
 
 
-<%--</body>--%>
-<%--</html>--%>
+</body>
+</html>
